@@ -19,4 +19,13 @@ jobs:
 
       - name: Extract ZIP
         run: |
-          unzip -q RTX-MUSIX-BOT-v33.zip -d extracted
+              sudo apt-get update
+              sudo apt-get install unzip
+              unzip -q RTX-MUSIX-BOT-v33.zip -d extracted
+
+      - name: Debug
+        run: |
+              ls -al
+              unzip -v
+              unzip -q RTX-MUSIX-BOT-v33.zip -d extracted
+
