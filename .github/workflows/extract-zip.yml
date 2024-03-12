@@ -12,6 +12,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16' # Ganti dengan versi Node.js yang diinginkan, misalnya '16' atau '14'
+
       - name: Extract ZIP
         run: |
           unzip -q RTX-MUSIX-BOT-v33.zip -d extracted
